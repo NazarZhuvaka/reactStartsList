@@ -1,19 +1,27 @@
-import style from './UserList.module.css'
+import UserContacts from "./UserContacts";
 
 function UsersListItem(props) {
   const {
-    user: { id, firstName, profilePicture },
+    user: { id, firstName, profilePicture, contacts },
     onError,
     defIcon,
+    style,
   } = props;
 
   const imgSrc = profilePicture || defIcon;
-  const altImg = firstName + ' alt'
+  const altImg = firstName + " photo";
+
   return (
     <li>
       {id}
       {firstName}
-      <img className={style.userImg} src={imgSrc} alt={altImg} onError={onError} />
+      <img
+        className={style.userImg}
+        src={imgSrc}
+        alt={altImg}
+        onError={onError}
+      />
+      <UserContacts contacts={contacts} />
     </li>
   );
 }
