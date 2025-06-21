@@ -56,10 +56,6 @@ class App extends Component {
         ) : (
           <LogForm isLogin={isLogin} logIn={this.handleClick} />
         )}
-        {/* <button onClick={this.handleClick}>
-          {isLogin ? "Log out" : "Log in"}
-        </button> */}
-        {/* <LogInButton isLogin={isLogin} logIn={this.handleClick}/> */}
       </>
     );
   }

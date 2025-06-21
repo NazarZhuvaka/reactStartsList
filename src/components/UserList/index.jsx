@@ -49,6 +49,7 @@ class UserList extends Component {
 
   render() {
     const { users } = this.state;
+    console.log(users)
     return <ul>{users.map(this.mapUser)}</ul>;
   }
 }
