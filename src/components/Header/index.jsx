@@ -17,7 +17,7 @@ class Header extends Component {
 
     return (
       <header className={styles.header}>
-        <a href="#!">My shop</a>
+        <a href="#!">My Starts List</a>
 
         <HeaderLinks style={styles} />
 

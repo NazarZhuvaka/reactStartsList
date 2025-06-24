@@ -21,6 +21,7 @@ class UserList extends Component {
   };
 
   mapUser = (u) => {
+    const {isLight} = this.props
     return (
       <UsersListItem
         key={u.id}
@@ -28,6 +29,7 @@ class UserList extends Component {
         onError={this.errorLoadingImg}
         defIcon={defultUserIcon}
         style={style}
+        isLight={isLight}
       />
     );
   };
@@ -50,7 +52,7 @@ class UserList extends Component {
   render() {
     const { users } = this.state;
     console.log(users)
-    return <ul>{users.map(this.mapUser)}</ul>;
+    return <ul className={style.productsList}>{users.map(this.mapUser)}</ul>;
   }
 }
 

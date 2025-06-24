@@ -4,6 +4,8 @@ import { Component } from "react";
 import Header from "./components/Header";
 import LogForm from "./components/LogForm";
 import UserList from "./components/UserList";
+import SideBar from "./components/SideBar";
+import Footer from "./components/Footer";
 
 class App extends Component {
   constructor(props) {
@@ -37,15 +39,21 @@ class App extends Component {
       backgroundColor: isLight ? "white" : "black",
     };
     const body = (
-      <div style={inlineStyles}>
+      <div style={inlineStyles} className="wrapper">
         <Header
           isLogin={isLogin}
           logIn={this.handleClick}
           isLight={isLight}
           switchHandler={this.switchTheme}
           inlineStyles={inlineStyles}
+          className="header"
         />
-        <UserList/>
+        <main className="main">
+          <SideBar className='sideBar'/>
+          <UserList isLight={isLight}/>
+        </main>
+
+        <Footer className="footer"/>
       </div>
     );
 
