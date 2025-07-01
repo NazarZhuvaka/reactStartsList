@@ -53,6 +53,7 @@ class App extends Component {
     const inlineStyles = {
       color: isLight ? "black" : "white",
       backgroundColor: isLight ? "white" : "#333",
+      height: "100%"
     };
     const body = (
       <div style={inlineStyles} className="wrapper">
