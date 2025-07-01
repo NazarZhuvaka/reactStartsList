@@ -21,8 +21,9 @@ class Header extends Component {
 
         <HeaderLinks style={styles} />
 
-        <div>
+        <div className={styles.btnsCon}>
           <ThemeButton
+            style={styles}
             isLight={isLight}
             switchHandler={switchHandler}
             inlineStyles={inlineStyles}

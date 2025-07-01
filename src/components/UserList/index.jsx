@@ -22,6 +22,7 @@ class UserList extends Component {
 
   mapUser = (u) => {
     const {isLight} = this.props
+
     return (
       <UsersListItem
         key={u.id}
@@ -42,7 +43,6 @@ class UserList extends Component {
       .then((data) => {
         const newUsers = data.map((u) => ({
           ...u,
-          isSelected: false,
         }));
         this.setState({ users: newUsers });
       })
@@ -51,7 +51,7 @@ class UserList extends Component {
 
   render() {
     const { users } = this.state;
-    console.log(users)
+
     return <ul className={style.productsList}>{users.map(this.mapUser)}</ul>;
   }
 }

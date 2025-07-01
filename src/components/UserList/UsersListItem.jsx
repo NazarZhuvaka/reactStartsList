@@ -12,6 +12,10 @@ function UsersListItem(props) {
   const imgSrc = profilePicture || defIcon;
   const altImg = firstName + " photo";
 
+  const userInitials = `${
+    "" === firstName ? "Someone" : firstName
+  } ${lastName}`;
+
   const newStyle = {
     color: isLight ? "white" : "black",
     backgroundColor: isLight ? "black" : "white",
@@ -27,9 +31,7 @@ function UsersListItem(props) {
           onError={onError}
         />
       </div>
-      <p>
-        {firstName} {lastName}
-      </p>
+      <p>{userInitials}</p>
       <UserContacts contacts={contacts} />
     </li>
   );

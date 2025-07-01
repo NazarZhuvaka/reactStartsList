@@ -11,3 +11,12 @@
     gap: 24px;
     align-items: center;
 }
+
+.themeButtom {
+    border: none;
+}
+
+.btnsCon {
+    display: flex;
+    gap: 15px;
+}

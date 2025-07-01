@@ -1,6 +1,6 @@
 function HeaderLinks(props) {
   const {style} = props  
-  const headerLink = ["Home", "About", "Contcats"];
+  const headerLink = ["Home", "About", "Contats"];
 
   const mapUser = (link, i) => {
     const href = `#!${link}`;

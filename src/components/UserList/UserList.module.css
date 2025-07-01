@@ -37,3 +37,10 @@
   object-fit: cover;
   border-radius: 6px;
 }
+
+
+.userLinks {
+  display: flex;
+  margin-top: 12px;
+  gap: 8px;
+}
