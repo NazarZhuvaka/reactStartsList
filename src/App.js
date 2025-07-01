@@ -14,8 +14,24 @@ class App extends Component {
     this.state = {
       isLogin: true,
       isLight: true,
+      users: [],
+      filteredUsers: []
     };
   }
+
+  setUsers = (users) => {
+    this.setState(prevState => ({
+      ...prevState,
+      users
+    }));
+  };
+
+  setFilteredUsers = (filteredUsers) => {
+    this.setState(prevState => ({
+      ...prevState,
+      filteredUsers
+    }));
+  };
 
   handleClick = () => {
     const { isLogin } = this.state;
@@ -49,8 +65,15 @@ class App extends Component {
           className="header"
         />
         <main className="main">
-          <SideBar className='sideBar'/>
-          <UserList isLight={isLight}/>
+          <SideBar className='sideBar' 
+          users={this.state.users} 
+          setUsers={this.setUsers}  
+          setFilteredUsers={this.setFilteredUsers} />
+          
+          <UserList isLight={isLight} 
+          users={this.state.users} 
+          setUsers={this.setUsers} 
+          filteredUsers={this.state.filteredUsers} />
         </main>
 
         <Footer className="footer"/>
