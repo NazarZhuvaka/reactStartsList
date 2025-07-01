@@ -11,7 +11,6 @@ class UserList extends Component {
 
     this.state = {
       imgSrc: defultUserIcon,
-      users: [],
     };
   }
 
@@ -41,18 +40,17 @@ class UserList extends Component {
         return response.json();
       })
       .then((data) => {
-        const newUsers = data.map((u) => ({
-          ...u,
-        }));
-        this.setState({ users: newUsers });
+        this.props.setUsers(data);
       })
       .catch((error) => console.error(`Loading error: ${error}`));
   }
 
   render() {
-    const { users } = this.state;
+    const { users, filteredUsers } = this.props;
 
-    return <ul className={style.productsList}>{users.map(this.mapUser)}</ul>;
+    return <ul className={style.productsList}>{
+      filteredUsers.length ? filteredUsers.map(this.mapUser) : users.map(this.mapUser)
+      }</ul>;
   }
 }
 
