@@ -1,8 +1,9 @@
-import style from "./UserList.module.css"
+import style from "./UserList.module.css";
 
 import { FaFacebook } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 function UserContacts(props) {
   const { contacts } = props;
@@ -17,6 +18,9 @@ function UserContacts(props) {
 
       case item.toLowerCase().includes("twitter"):
         return <FaTwitter />;
+      
+        case item.toLowerCase().includes("linkedin"):
+        return <FaLinkedin />;
 
       default:
         return "Unknown";
