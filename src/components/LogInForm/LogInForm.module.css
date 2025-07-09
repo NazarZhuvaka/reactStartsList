@@ -1,0 +1,37 @@
+.formContainer {
+  margin: 10px auto;
+  padding: 20px;
+  box-shadow: 0 0 5px gray;
+  max-width: 800px;
+  width: 100%;
+  min-width: 320px;
+}
+
+.formHeader {
+  text-align: center;
+}
+
+.logInForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input {
+  padding: 10px;
+  outline: none;
+}
+
+.inputValid {
+    border: 2px solid green;
+}
+
+.inputInValid {
+    border: 2px solid red;
+}

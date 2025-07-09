@@ -2,7 +2,7 @@ import "./App.css";
 
 import { Component } from "react";
 import Header from "./components/Header";
-import LogForm from "./components/LogForm";
+import LogForm from "./components/LogInForm";
 import UserList from "./components/UserList";
 import SideBar from "./components/SideBar";
 import Footer from "./components/Footer";
