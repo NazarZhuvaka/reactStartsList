@@ -1,11 +1,24 @@
 function SearchBtn(props) {
-  console.log("Props From serachBtn: ", props);
   const { clickMyFunc } = props;
-  console.log(clickMyFunc);
+
+  const optionstOfSearch = [
+    "All",
+    "twitter",
+    "facebook",
+    "instagram",
+    "linkedin",
+  ];
+
   return (
-    <li>
-      <button onClick={()=>clickMyFunc('twitter')}>SearchBtn</button>
-    </li>
+    <ul>
+      {optionstOfSearch.map((item, index) => {
+        return (
+          <li key={index}>
+            <button onClick={() => clickMyFunc(item)}>{item}</button>
+          </li>
+        );
+      })}
+    </ul>
   );
 }
 
