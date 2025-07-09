@@ -43,7 +43,7 @@ class LogInForm extends Component {
 
   render() {
     const { email, password, isEmailValid, isPasswordValid } = this.state;
-    const { isLogin, logIn } = this.props;
+    const { logIn } = this.props;
     // const emailClassName = `${styles.input} ${isEmailValid ? styles.inputValid : styles.inputInValid}`
     const emailClassName = classNames(styles.input, {
       [styles.inputValid]: isEmailValid,
@@ -82,7 +82,7 @@ class LogInForm extends Component {
               placeholder="Enter your password"
             />
           </label>
-          <LogInButton logIn={logIn} />
+          <LogInButton logIn={logIn} disabled={!(isEmailValid && isPasswordValid)} />
         </form>
       </div>
     );

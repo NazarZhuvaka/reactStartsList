@@ -1,6 +1,6 @@
 function LogInButton(props) {
-  const { isLogin, logIn } = props;
-  return <button onClick={logIn} type="submit" >{isLogin ? "Log out" : "Log in"}</button>;
+  const { isLogin, logIn, disabled } = props;
+  return <button onClick={logIn} disabled={disabled} type="submit" >{isLogin ? "Log out" : "Log in"}</button>;
 }
 
 export default LogInButton;
